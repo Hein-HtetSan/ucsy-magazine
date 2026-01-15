@@ -9,7 +9,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 const FEATURED_POST = {
   title: "ရွှေ့ပြောင်း၍မရနိုင်သောသူ: ပြည့်ဖြိုးမောင်",
   subtitle: "UCSY ၏ ဒဏ္ဍာရီတစ်ပါး",
-  excerpt: "မင်းကိုစတွေ့ခဲ့တဲ့ နေရာလေးဆီ ပြန်သွားမယ်... အိပ်ယာလိပ်ကလေးနဲ့ စောင့်နေမယ်... ငါဘယ်မှမသွားဘူး... သီချင်းထဲကလိုပဲ ခိုင်မာတဲ့ သံန္နိဌာန်နဲ့ ကျောင်းသားတစ်ယောက်အကြောင်း။",
+  excerpt: "မင်းကိုစတွေ့ခဲ့တဲ့ နေရာလေးဆီ ပြန်သွားမယ်... လွယ်အိတ်ကလေးနဲ့ စောင့်နေမယ်... ငါဘယ်မှမသွားဘူး... သီချင်းထဲကလိုပဲ ခိုင်မာတဲ့ သံန္နိဌာန်နဲ့ ကျောင်းသားတစ်ယောက်အကြောင်း။",
   category: "Campus Life",
   author: "The Script (Fan)",
   date: "Oct 24, 2023",
@@ -97,10 +97,10 @@ export default function Home() {
                 src={FEATURED_POST.image} 
                 alt={FEATURED_POST.title} 
                 fill 
-                className="object-cover opacity-90 dark:opacity-60 grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out"
+                className="object-cover opacity-50 dark:opacity-60 grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent opacity-20"></div>
           </div>
           
           <div className="container mx-auto px-4 sm:px-8 relative z-10 grid grid-cols-12 gap-8 h-full">
@@ -109,12 +109,11 @@ export default function Home() {
                     <span className="h-[1px] w-12 bg-primary"></span>
                     <span className="text-sm font-bold uppercase tracking-[0.2em] text-primary">{FEATURED_POST.category}</span>
                 </div>
-                <h1 className="text-6xl md:text-8xl lg:text-9xl font-black font-burmese leading-[0.85] tracking-tighter mix-blend-difference text-foreground lg:whitespace-nowrap">
+                <h3 className="text-5xl md:text-7xl lg:text-7xl font-black font-burmese leading-[0.85] tracking-tighter mix-blend-difference text-foreground lg:whitespace-nowrap">
                     ရွှေ့ပြောင်း၍ <br/>
-                    <span className="text-outline lg:ml-24">မရနိုင်သော</span> <br/>
-                    <span className="lg:ml-48">သူ</span>
-                </h1>
-                <p className="text-lg md:text-xl text-muted-foreground max-w-xl border-l-2 border-primary pl-6 py-2 mt-8 font-burmese">
+                    <span className="text-outline lg:ml-24">မရနိုင်သော သူ</span> <br/>
+                </h3>
+                <p className="text-lg md:text-xl max-w-xl border-l-2 border-primary pl-6 py-2 mt-8 font-burmese">
                     {FEATURED_POST.excerpt}
                 </p>
                 <div className="pt-8">
