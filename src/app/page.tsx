@@ -7,14 +7,14 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 // Dummy Data
 const FEATURED_POST = {
-  title: "The Future of AI in Higher Education",
-  subtitle: "UCSY's New Initiative",
-  excerpt: "Exploring how artificial intelligence is reshaping the landscape of learning and research at our university.",
-  category: "Academics",
-  author: "Dr. Thida San",
+  title: "ရွှေ့ပြောင်း၍မရနိုင်သောသူ: ပြည့်ဖြိုးမောင်",
+  subtitle: "UCSY ၏ ဒဏ္ဍာရီတစ်ပါး",
+  excerpt: "မင်းကိုစတွေ့ခဲ့တဲ့ နေရာလေးဆီ ပြန်သွားမယ်... အိပ်ယာလိပ်ကလေးနဲ့ စောင့်နေမယ်... ငါဘယ်မှမသွားဘူး... သီချင်းထဲကလိုပဲ ခိုင်မာတဲ့ သံန္နိဌာန်နဲ့ ကျောင်းသားတစ်ယောက်အကြောင်း။",
+  category: "Campus Life",
+  author: "The Script (Fan)",
   date: "Oct 24, 2023",
-  image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2940&auto=format&fit=crop",
-  slug: "future-of-ai-ucsy"
+  image: "/images/phout-phaw.jpg",
+  slug: "the-man-who-cant-be-moved"
 };
 
 const TRENDING_POSTS = [
@@ -61,11 +61,9 @@ const TRENDING_POSTS = [
 ];
 
 const LATEST_UPDATES = [
-    "Library hours extended for exam week",
-    "New shuttle bus schedule released",
-    "Guest lecture by Google Engineer this Friday",
-    "Cafeteria introduces new vegan menu",
-    "Robotics club recruiting new members"
+    "ရာသီတွေ ဘယ်လိုပြောင်းပြောင်း မပြောင်းလဲဘဲ တည်ရှိနေတဲ့ \"The Man Who Can't Be Moved\"",
+    "ရာသီတွေ ဘယ်လိုပြောင်းပြောင်း မပြောင်းလဲဘဲ တည်ရှိနေတဲ့ \"The Man Who Can't Be Moved\"",
+    "ရာသီတွေ ဘယ်လိုပြောင်းပြောင်း မပြောင်းလဲဘဲ တည်ရှိနေတဲ့ \"The Man Who Can't Be Moved\""
 ];
 
 export default function Home() {
@@ -111,12 +109,12 @@ export default function Home() {
                     <span className="h-[1px] w-12 bg-primary"></span>
                     <span className="text-sm font-bold uppercase tracking-[0.2em] text-primary">{FEATURED_POST.category}</span>
                 </div>
-                <h1 className="text-6xl md:text-8xl lg:text-9xl font-black font-serif leading-[0.85] tracking-tighter mix-blend-difference text-foreground lg:whitespace-nowrap">
-                    THE FUTURE <br/>
-                    <span className="text-outline lg:ml-24">OF AI</span> <br/>
-                    <span className="lg:ml-48">EDUCATION</span>
+                <h1 className="text-6xl md:text-8xl lg:text-9xl font-black font-burmese leading-[0.85] tracking-tighter mix-blend-difference text-foreground lg:whitespace-nowrap">
+                    ရွှေ့ပြောင်း၍ <br/>
+                    <span className="text-outline lg:ml-24">မရနိုင်သော</span> <br/>
+                    <span className="lg:ml-48">သူ</span>
                 </h1>
-                <p className="text-lg md:text-xl text-muted-foreground max-w-xl border-l-2 border-primary pl-6 py-2 mt-8">
+                <p className="text-lg md:text-xl text-muted-foreground max-w-xl border-l-2 border-primary pl-6 py-2 mt-8 font-burmese">
                     {FEATURED_POST.excerpt}
                 </p>
                 <div className="pt-8">
@@ -158,7 +156,7 @@ export default function Home() {
                 }
 
                 return (
-                    <Link href={`/article/${post.slug}`} key={post.slug} className={`${colSpan} ${rowSpan} group relative overflow-hidden bg-muted`}>
+                    <Link href={`/article/${post.slug}`} key={post.slug} className={`${colSpan} ${rowSpan} group relative overflow-hidden bg-secondary`}>
                          <Image 
                             src={post.image} 
                             alt={post.title} 
@@ -189,32 +187,32 @@ export default function Home() {
         <section className="bg-foreground text-background py-24">
             <div className="container mx-auto px-4 sm:px-8">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20">
-                    <h2 className="text-5xl md:text-7xl font-black font-serif tracking-tighter text-outline-white">
+                    <h2 className="text-5xl md:text-7xl font-black font-serif tracking-tighter text-outline-background">
                         LATEST <br/> STORIES
                     </h2>
-                    <p className="text-muted-foreground max-w-sm mt-8 md:mt-0 text-lg">
+                    <p className="text-background/80 max-w-sm mt-8 md:mt-0 text-lg">
                         Stay updated with the latest happenings, research breakthroughs, and student achievements.
                     </p>
                 </div>
 
-                <div className="space-y-0 divide-y divide-white/20">
+                <div className="space-y-0 divide-y divide-background/20">
                     {[1, 2, 3].map((item, i) => (
-                        <div key={i} className="group py-12 flex flex-col md:flex-row gap-8 items-start md:items-center hover:bg-white/5 transition-colors px-4 -mx-4">
-                            <span className="text-6xl font-black font-serif text-white/20 group-hover:text-primary transition-colors">
+                        <div key={i} className="group py-12 flex flex-col md:flex-row gap-8 items-start md:items-center hover:bg-background/5 transition-colors px-4 -mx-4">
+                            <span className="text-6xl font-black font-serif text-background/20 group-hover:text-primary transition-colors">
                                 0{item}
                             </span>
                             <div className="flex-1">
                                 <div className="flex items-center gap-3 mb-2">
                                     <span className="text-xs font-bold uppercase tracking-widest text-primary">Category</span>
-                                    <span className="w-1 h-1 bg-white/50 rounded-full"></span>
-                                    <span className="text-xs text-white/60">Oct {24-i}, 2023</span>
+                                    <span className="w-1 h-1 bg-background/50 rounded-full"></span>
+                                    <span className="text-xs text-background/60">Oct {24-i}, 2023</span>
                                 </div>
-                                <h3 className="text-3xl md:text-4xl font-bold font-serif group-hover:translate-x-4 transition-transform duration-300">
+                                <h3 className="text-3xl md:text-4xl font-bold font-serif group-hover:translate-x-4 transition-transform duration-300 text-background">
                                     <Link href="#">Sample Article Title That Is Very Engaging</Link>
                                 </h3>
                             </div>
                             <div className="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity transform translate-x-4 group-hover:translate-x-0 duration-300">
-                                <span className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center text-white">
+                                <span className="w-16 h-16 rounded-full border border-background/20 flex items-center justify-center text-background">
                                     <ArrowUpRight className="h-6 w-6" />
                                 </span>
                             </div>
@@ -223,7 +221,7 @@ export default function Home() {
                 </div>
                 
                 <div className="mt-16 flex justify-center">
-                    <button className="px-12 py-4 border border-white/20 hover:bg-white hover:text-black transition-colors font-bold uppercase tracking-widest text-sm">
+                    <button className="px-12 py-4 border border-background/20 hover:bg-background hover:text-foreground transition-colors font-bold uppercase tracking-widest text-sm text-background">
                         Load All Stories
                     </button>
                 </div>

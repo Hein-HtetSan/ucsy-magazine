@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, Playfair_Display, Padauk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -18,6 +18,12 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
 });
 
+const padauk = Padauk({
+  variable: "--font-padauk",
+  weight: ["400", "700"],
+  subsets: ["myanmar"],
+});
+
 export const metadata: Metadata = {
   title: "UCSY Magazine",
   description: "The official university blog and magazine.",
@@ -31,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${padauk.variable} antialiased bg-background text-foreground`}
       >
         <ThemeProvider
           attribute="class"

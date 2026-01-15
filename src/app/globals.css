@@ -94,6 +94,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-playfair);
+  --font-burmese: var(--font-padauk);
 }
 
 body {
@@ -117,6 +118,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-outline-white {
     -webkit-text-stroke: 1px rgba(255,255,255,0.8);
+    color: transparent;
+}
+
+.text-outline-background {
+    -webkit-text-stroke: 1px var(--background);
     color: transparent;
 }
 
