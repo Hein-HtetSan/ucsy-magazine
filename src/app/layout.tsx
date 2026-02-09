@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Playfair_Display, Padauk } from "next/font/google";
+// import { Geist, Geist_Mono, Playfair_Display, Padauk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
+/*
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,6 +24,7 @@ const padauk = Padauk({
   weight: ["400", "700"],
   subsets: ["myanmar"],
 });
+*/
 
 export const metadata: Metadata = {
   title: "UCSY Magazine",
@@ -37,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${padauk.variable} antialiased bg-background text-foreground`}
+        className={`antialiased bg-background text-foreground`}
       >
         <ThemeProvider
           attribute="class"
